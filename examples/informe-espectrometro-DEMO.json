@@ -1,0 +1,12 @@
+{
+  "schema": "nexus.spectrometer.result/1",
+  "method": "FTIR",
+  "materialId": "PP",
+  "confidence": 0.98,
+  "deviceId": "EQUIPO-DEMO-NO-REAL",
+  "calibrationId": "CAL-DEMO",
+  "sampleId": "MUESTRA-DEMO",
+  "libraryVersion": "DEMO-1",
+  "measuredAt": "2026-10-09T15:00:00.000Z",
+  "calibratedAt": "2026-10-09T12:00:00.000Z"
+}

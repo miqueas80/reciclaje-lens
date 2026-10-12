@@ -1,0 +1,12 @@
+{
+  "name": "nexus-recycle-lens-industrial-pilot",
+  "version": "3.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "verify": "npm test && npm run build && node tools/release-check.mjs",
+    "build": "node tools/build.mjs"
+  },
+  "description": "NEXUS Recycle Lens Industrial 3.1 · módulo Local-First de inspección y QA en piloto supervisado"
+}

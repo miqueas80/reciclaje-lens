@@ -1,0 +1,6 @@
+keyId: KEY-SIM-01
+deviceId: SIM-FTIR-01
+publicKey: ALq5BktI9u17GNoOY8p1HsE5yiXDrOvHuXjY+ke+h7o=
+SHA256 (clave pública): b796db0e3980f1f6ac83a0c7d2a1ace285a50edfa7d11c66dfd8fe63994be407
+
+DEMO de interfaz, ninguna identidad, espectro ni calibración real.

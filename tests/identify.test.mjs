@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {identifyMark} from '../identify.js';import {MATERIALS} from '../catalog.js';
+test('Seven canonical resin identification codes',()=>{for(let n=1;n<=7;n++){const r=identifyMark(String(n));assert.equal(r.status,'identified');assert.equal(Number(r.material.ric),n)}});
+test('Marked polymer names',()=>{for(const [input,id] of [['>PP<','PP'],['05 PP','PP'],['>ABS<','ABS'],['PE-HD','HDPE'],['PETG','PETG'],['PA66','PA']]){const r=identifyMark(input);assert.equal(r.status,'identified',input+' '+JSON.stringify(r));assert.equal(r.material.id,id)}});
+test('Not infer resin from a random number or multiple polymers',()=>{assert.equal(identifyMark('250 ml').status,'unknown');assert.equal(identifyMark('PP PET').status,'ambiguous');assert.equal(identifyMark('03 PET').status,'ambiguous');assert.equal(identifyMark('>ABS+PC<').status,'ambiguous');assert.equal(identifyMark('5','auto').status,'ambiguous')});
+test('Material catalogue covers all known seven groups plus additional categories',()=>{assert.ok(MATERIALS.length>=20);assert.equal(new Set(MATERIALS.map(x=>x.id)).size,MATERIALS.length)});
